@@ -96,4 +96,5 @@ public class hw1_eokunbor {
         countVowelsConsonants("Hello");
         countVowelsConsonants("programming");
     }
+
 }
