@@ -6,120 +6,77 @@ public class hw1_eokunbor {
     private int n;
     private String s;
 
-    public void BMIperson (double weight, double height) {
-        this.weight = weight;
-        this.height = height;
-    }
-    public double getheight() {
-        return height;
-    }
-    public void setheight(double height) {
-		this.height = height;
-	}
-    public double getweight() {
-        return weight;
-    }
-    public void setweight(double weight) {
-		this.weight = weight;
-	}
-
-    public double calculateBMI() {
+    public static double calculateBMI(double weight, double height) {
         return weight / (height * height);
     }
 
-//* */
-    public void bNumber (int n2) {
-        this.n2 = n2;
-    }
-    public int getn2() {
-        return n2;
-    }
-    public void setn2(int n2) {
-        this.n2= n2;
-    } 
-
-    public boolean blazerNumber() {
-        if (n2 % 2 == 0) {
-            return true;
-        } else {
+    public static boolean blazerNumber(int n2) {
+        if (n2 < 0) {
             return false;
         }
-    }
-//* */
-    public void examplePrime(int maxNum) {
-        this.maxNum = maxNum;
-    }
-    public int getmaxNum() {
-        return maxNum;
-    }
-    public void setmaxNum (int maxNum) {
-        this.maxNum= maxNum;
-    }   
-    public int findLargestPrime() {
-        int i;
-        int num = 0;
-        for (i = 1; i <= maxNum; i++) {
-            if (maxNum % i == 0) {
-                num = i;
+        int sum = 0;
+
+        for (int i = 1; i < n2; i++) {
+            if (n2 % i == 0) {
+                sum += i;
             }
         }
-        return num;
+        return sum != n2;
     }
-//* */
-    public void exampleSteps(int n) {
-        this.n = n;
+
+    public static int findLargestPrime(int maxNum) {
+        int largestPrime = 0;
+        for (int i = 2; i <= maxNum; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                largestPrime = i;
+            }
+        }
+        return largestPrime;
     }
-    public int getn() {
-        return n;
-    }
-    public void setn (int n) {
-        this.n= n;
-    }   
-    public int numSteps() {
+
+    public static int numSteps(int n) {
         int steps = 0;
-        while (n != 1) {
-            if (n % 2 == 0) {
-                n = n / 2;
-            } else {
-                n = n - 1;
+
+        while (n > 0) {
+            if (n % 2 == 0) { 
+                n /= 2;
+            } else { 
+                n -= 1;
             }
             steps++;
         }
+
         return steps;
     }
-
-// */
-    public void VowelsConsonants(String s) {
-        this.s = s;
-    }
-    public String gets() {
-        return s;
-    }
-    public void sets(String s) {
-        this.s= s;
-    } 
-    public String countVowelsConsonants() {
+    
+    public static void countVowelsConsonants(String s) {
         int vowels = 0;
         int consonants = 0;
+
         for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            char c = s.charAt(i);
+
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
                 vowels++;
-            } else {
+            }
+
+            else if ((c >= 'a' && c <= 'z')) {
                 consonants++;
             }
         }
-        return "Vowels: " + vowels + ", Consonants: " + consonants;
+        System.out.println(vowels + "," + consonants);
     }
 
     public static void main(String[] args) {
-        
-    
-        double bmi1 = person1.calculateBMI();
-
-        hw1_eokunbor person2 = new hw1_eokunbor();
-        person2.BMIperson(85, 1.80);
-        double bmi2 = person2.calculateBMI();
+        double bmi1 = calculateBMI(70, 1.75);
+        double bmi2 = calculateBMI(85, 1.80);
         System.out.println("BMI 1: " + bmi1);
         System.out.println("BMI 1: " + bmi2);
 
@@ -134,11 +91,9 @@ public class hw1_eokunbor {
         System.out.println("Largest Prime 2: " + prime2);
 
         int steps = numSteps(14);
-        System.out.println("Num Steps: " + prime1);
+        System.out.println("Num Steps: " + steps);
 
         countVowelsConsonants("Hello");
         countVowelsConsonants("programming");
-
     }
-
 }
