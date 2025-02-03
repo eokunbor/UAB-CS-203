@@ -1,5 +1,6 @@
 
 public class UABPerson {
+
 	private String name;
     private String gender;
     private int age;
@@ -36,6 +37,28 @@ public class UABPerson {
 	public void setBlazer(String blazer) {
 		this.blazer = blazer;
 	}
-    
-    
+
+	public boolean checkPalindrome() {
+		String name = this.name;
+		int length = name.length();
+		for (int i = 0; i < length / 2; i++) {
+			if (name.charAt(i) != name.charAt(length - i - 1)) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	public int yearsToRetirement() {
+		int age = this.age;
+		if (age < 65) {
+			return 65 - age;
+		} else {
+			return 0;
+		}
+	}
+
+	public String toString() {
+		return this.name + " is a " + this.age + " year old.";
+	}
 }
