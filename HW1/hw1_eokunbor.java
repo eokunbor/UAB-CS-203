@@ -81,7 +81,7 @@ public class hw1_eokunbor {
         System.out.println("BMI 1: " + bmi2);
 
         boolean result1 = blazerNumber(28);
-        boolean result2 = blazerNumber(12);
+        boolean result2 = blazerNumber(7);
         System.out.println("Blazer Number 1: " + result1);
         System.out.println("Blazer Number 2: " + result2);
 
