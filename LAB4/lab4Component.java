@@ -11,76 +11,77 @@ public class lab4Component extends JComponent {
 
         Graphics2D g2 = (Graphics2D) g;
 
-        // Background
-        g2.setColor(Color.BLUE);
+        // sky and grass
+        g2.setColor(new Color(64, 146, 246));
         g2.fillRect(0, 0, 1600, 900); // Sky
-        g2.setColor(Color.GREEN);
+        g2.setColor(new Color(99, 235, 53));
         g2.fillRect(0, 648, 1600, 252); // Grass
 
-        // Main House
-        g2.setColor(new Color(162, 0, 0));
+        // main house
+        g2.setColor(new Color(151, 151, 151));
         g2.fill(new Rectangle2D.Double(692, 380, 630, 324));
 
-        // Roof Rectangle Extension
-        g2.setColor(new Color(118, 150, 193));
+        // roof rectangle mini extension
+        g2.setColor(new Color(107, 118, 146));
         g2.fill(new Rectangle2D.Double(534, 250, 570, 140));
 
-        // Left Roof Triangle
+        // left tri wall
         int[] xPoints1 = {534, 377, 692};
         int[] yPoints1 = {190, 290, 290};
-        g2.setColor(Color.RED);
+        g2.setColor(new Color(255, 255, 255));
         g2.fillPolygon(xPoints1, yPoints1, 3);
 
-        // Roof Rectangle
-        g2.setColor(new Color(118, 150, 193));
+        // roof rectangle
+        g2.setColor(new Color(107, 118, 146));
         g2.fill(new Rectangle2D.Double(692, 250, 570, 140));
 
-        // Side House
-        g2.setColor(Color.RED);
+        // side house
+        g2.setColor(new Color(255, 255, 255));
         g2.fill(new Rectangle2D.Double(377, 290, 315, 414));
 
-        // ✅ Right Roof Triangle (Fixed Variable Name)
+        // right roof triangle 
         int[] xPoints2 = {1262, 1262, 1390};
         int[] yPoints2 = {250, 390, 390};
-        g2.setColor(new Color(118, 150, 193));
+        g2.setColor(new Color(107, 118, 146));
         g2.fillPolygon(xPoints2, yPoints2, 3);
 
-        // ✅ Quadrilateral Roof Part (Renamed Variables)
+        // quad roof part 
         int[] xPoints3 = {534, 720, 720, 534};
         int[] yPoints3 = {150, 280, 320, 190};
-        g2.setColor(new Color(159, 192, 224));
+        g2.setColor(new Color(149, 160, 188));
         g2.fillPolygon(xPoints3, yPoints3, 4);
 
         int[] xPoints4 = {348, 534, 534, 348};
         int[] yPoints4 = {280, 150, 190, 320};
-        g2.setColor(new Color(159, 192, 224));
+        g2.setColor(new Color(149, 160, 188));
         g2.fillPolygon(xPoints4, yPoints4, 4);
-
-        //long banner (patio)
-        g2.setColor(new Color(124, 199, 182));
-        g2.fill(new Rectangle2D.Double(377, 390, 945, 50));
         
         // base balcony 
-        g2.setColor(new Color(124, 199, 182));
+        g2.setColor(new Color(221, 221, 221));
         g2.fill(new Rectangle2D.Double(977, 650, 345, 54));
 
         // pillars
-        g2.setColor(new Color(124, 199, 182));
+        g2.setColor(new Color(221, 221, 221));
         g2.fill(new Rectangle2D.Double(977, 410, 75, 240));
 
-        g2.setColor(new Color(124, 199, 182));
+        g2.setColor(new Color(221, 221, 221));
         g2.fill(new Rectangle2D.Double(1247, 410, 75, 240));
 
         // arm rail
-        g2.setColor(new Color(124, 199, 182));
+        g2.setColor(new Color(221, 221, 221));
         g2.fill(new Rectangle2D.Double(1052, 565, 195, 20));
+
+         //long banner (patio)
+        g2.setColor(new Color(221, 221, 221));
+        g2.fill(new Rectangle2D.Double(377, 390, 945, 50));
+
 
         //stairs
         g2.setColor(new Color(90, 31, 25));
         g2.fill(new Rectangle2D.Double(692, 650, 285, 54));
 
         //door
-        g2.setColor(new Color(76, 103, 141));
+        g2.setColor(new Color(104, 61, 51));
         g2.fill(new Rectangle2D.Double(768, 460, 133, 190));
 
         //window 1
@@ -94,6 +95,13 @@ public class lab4Component extends JComponent {
         //window 3
         g2.setColor(new Color(218, 196, 0));
         g2.fill(new Rectangle2D.Double(1101, 460, 97, 90));
+
+        //walkway
+        int[] xPoints8 = {692, 977, 1052, 480};
+        int[] yPoints8 = {700, 700, 900, 900};
+        g2.setColor(new Color(134, 121, 104));
+        g2.fillPolygon(xPoints8, yPoints8, 4);
+
 
         // START OF BLACK LINES
         //Patio outer side
@@ -233,6 +241,32 @@ public class lab4Component extends JComponent {
         g2.setStroke(new BasicStroke(7));
         g2.drawLine(770,460 , 770, 650);
 
+        //window crosses (all)
+        g2.setColor(Color.BLACK);
+        g2.setStroke(new BasicStroke(7));
+        g2.drawLine(534,480 , 534, 670);
+
+        g2.setColor(Color.BLACK);
+        g2.setStroke(new BasicStroke(7));
+        g2.drawLine(455,575 , 614, 575);
+
+
+        g2.setColor(Color.BLACK);
+        g2.setStroke(new BasicStroke(7));
+        g2.drawLine(534,280 , 534, 370);
+
+        g2.setColor(Color.BLACK);
+        g2.setStroke(new BasicStroke(7));
+        g2.drawLine(455,325 , 614, 325);
+
+        g2.setColor(Color.BLACK);
+        g2.setStroke(new BasicStroke(7));
+        g2.drawLine(1149,460 , 1149, 550);
+
+        g2.setColor(Color.BLACK);
+        g2.setStroke(new BasicStroke(7));
+        g2.drawLine(1101,500 , 1198, 500);
+
         //windows 1 
         g2.setColor(Color.BLACK);
         g2.setStroke(new BasicStroke(7));
@@ -268,7 +302,6 @@ public class lab4Component extends JComponent {
         g2.setStroke(new BasicStroke(7));
         g2.drawLine(455,370 , 614, 370);
 
-
         //windows 3
         g2.setColor(Color.BLACK);
         g2.setStroke(new BasicStroke(7));
@@ -286,46 +319,10 @@ public class lab4Component extends JComponent {
         g2.setStroke(new BasicStroke(7));
         g2.drawLine(1101,550 , 1198, 550);
 
-        //window crosses (all)
-        g2.setColor(Color.BLACK);
-        g2.setStroke(new BasicStroke(7));
-        g2.drawLine(534,480 , 534, 670);
-
-        g2.setColor(Color.BLACK);
-        g2.setStroke(new BasicStroke(7));
-        g2.drawLine(455,575 , 614, 575);
-
-
-        g2.setColor(Color.BLACK);
-        g2.setStroke(new BasicStroke(7));
-        g2.drawLine(534,280 , 534, 370);
-
-        g2.setColor(Color.BLACK);
-        g2.setStroke(new BasicStroke(7));
-        g2.drawLine(455,325 , 614, 325);
-
-        g2.setColor(Color.BLACK);
-        g2.setStroke(new BasicStroke(7));
-        g2.drawLine(1149,460 , 1149, 550);
-
-        g2.setColor(Color.BLACK);
-        g2.setStroke(new BasicStroke(7));
-        g2.drawLine(1101,500 , 1198, 500);
-
         //door handle
         g2.setColor(Color.BLACK);
         g2.setStroke(new BasicStroke(7));
         g2.drawLine(790,555 , 790, 580);
-
-
-
-
-
-
-
-
-
-
 
         //Stairs Runs
         g2.setColor(Color.BLACK);
@@ -335,6 +332,33 @@ public class lab4Component extends JComponent {
         g2.setColor(Color.BLACK);
         g2.setStroke(new BasicStroke(4));
         g2.drawLine(692,665, 977, 665);
+
+        //tree 
+        g2.setColor(new Color(149, 79, 26));
+        g2.fill(new Rectangle2D.Double(225, 480, 60, 300));
+
+        g2.setColor(new Color(149, 79, 26));
+        g2.setStroke(new BasicStroke(12));
+        g2.drawLine(283, 600, 325, 500);
+
+        g2.setColor(new Color(0, 177, 23)); 
+        g2.fill(new Ellipse2D.Double(150, 300, 200, 200));  
+
+        g2.setColor(Color.BLACK); 
+        g2.setStroke(new BasicStroke(5));
+        g2.draw(new Ellipse2D.Double(150, 300, 200, 200)); 
+
+        g2.setColor(Color.green); 
+        g2.fill(new Ellipse2D.Double(290, 430, 100, 100));
+
+        g2.setColor(Color.black); 
+        g2.setStroke(new BasicStroke(5));
+        g2.draw(new Ellipse2D.Double(290, 430, 100, 100)); 
+
+        //my name
+        g2.setColor(Color.white);
+        g2.setFont(new Font("Arial", Font.BOLD, 24));
+        g2.drawString("Elizabeth Okunbor", 1290, 810);
 
 
 
