@@ -1,4 +1,4 @@
-package LAB4;
+package HW2;
 import javax.swing.*;
 import java.awt.*;
 

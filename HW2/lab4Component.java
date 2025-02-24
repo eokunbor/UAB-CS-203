@@ -1,4 +1,5 @@
-package LAB4;
+package HW2; 
+
 import java.awt.*;
 import java.awt.geom.*;
 import javax.swing.JComponent;
