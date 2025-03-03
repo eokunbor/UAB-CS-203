@@ -18,12 +18,12 @@ public class StudentTester {
             String[] parts = line.split(",");
             
             if (parts.length == 4) {
-                String name = parts[0]; 
-                double exam1 = Double.parseDouble(parts[1]);  
-                double exam2 = Double.parseDouble(parts[2]);  
-                double finalExam = Double.parseDouble(parts[3]);  
-                students[count] = new Student(name, exam1, exam2, finalExam);
-                count++;
+            String name = parts[0]; 
+            int exam1 = Integer.parseInt(parts[1]);  
+            int exam2 = Integer.parseInt(parts[2]);  
+            int finalExam = Integer.parseInt(parts[3]);  
+            students[count] = new Student(name, exam1, exam2, finalExam);
+            count++;
             }
         }
         scanner.close();

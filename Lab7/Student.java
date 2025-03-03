@@ -1,16 +1,13 @@
 package Lab7;
 
 public class Student {
-    private String name;
-    private double exam1;
-    private double exam2;
-    private double finalExam;
+    private String Name;
+    private int exam1,exam2, finalExam;
     private double finalGrade;
     private char letterGrade;
     
-    // Constructor
-    public Student(String name, double exam1, double exam2, double finalExam) {
-        this.name = name;
+    public Student(String name, int exam1, int exam2, int finalExam) {
+        this.Name = name;
         this.exam1 = exam1;
         this.exam2 = exam2;
         this.finalExam = finalExam;
@@ -18,12 +15,10 @@ public class Student {
         setLetterGrade();
     }
     
-    // Method to calculate and set final grade
     public void setFinalGrade() {
         this.finalGrade = 0.25 * exam1 + 0.25 * exam2 + 0.5 * finalExam;
     }
     
-    // Method to calculate and set letter grade
     public void setLetterGrade() {
         if (finalGrade > 90) {
             letterGrade = 'A';
@@ -36,9 +31,8 @@ public class Student {
         }
     }
     
-    // Getters
     public String getName() {
-        return name;
+        return Name;
     }
     
     public double getFinalGrade() {
