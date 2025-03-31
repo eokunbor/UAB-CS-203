@@ -1,0 +1,105 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "RestaurantDriver",
+            "request": "launch",
+            "mainClass": "Lab10.RestaurantDriver",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "RestaurantMain",
+            "request": "launch",
+            "mainClass": "Lab10.RestaurantMain",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "SimpleUABSystem",
+            "request": "launch",
+            "mainClass": "HW3.SimpleUABSystem",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BookTester",
+            "request": "launch",
+            "mainClass": "BookTester",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "QuadDrawingViewer",
+            "request": "launch",
+            "mainClass": "HW2.QuadDrawingViewer",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "UABSystem",
+            "request": "launch",
+            "mainClass": "HW3.UABSystem",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "lab4Viewer",
+            "request": "launch",
+            "mainClass": "LAB4.lab4Viewer",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "Tester",
+            "request": "launch",
+            "mainClass": "LAB5.Tester",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "FileReaderDemo",
+            "request": "launch",
+            "mainClass": "LAB6.FileReaderDemo",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "StudentTester",
+            "request": "launch",
+            "mainClass": "Lab7.StudentTester",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "calculator",
+            "request": "launch",
+            "mainClass": "Lab9.calculator",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "UABPersonTester",
+            "request": "launch",
+            "mainClass": "UABPersonTester",
+            "projectName": "UAB-CS-203-1_e5757181"
+        },
+        {
+            "type": "java",
+            "name": "hw1_eokunbor",
+            "request": "launch",
+            "mainClass": "hw1_eokunbor",
+            "projectName": "UAB-CS-203-1_e5757181"
+        }
+    ]
+}
